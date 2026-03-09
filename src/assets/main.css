@@ -1,35 +1,37 @@
-@import './base.css';
+@import 'tailwindcss';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Light palette */
+  --color-surface-950: #faf9f7;
+  --color-surface-900: #ffffff;
+  --color-surface-800: #f2f0ec;
+  --color-surface-700: #d6d3cc;
+  --color-surface-600: #a8a49c;
+  --color-surface-500: #78736a;
+  --color-surface-400: #57524a;
+  --color-surface-300: #3d3832;
+  --color-surface-200: #2a2520;
+  --color-surface-100: #1a1614;
+
+  --color-accent-400: #60a5fa;
+  --color-accent-500: #3b82f6;
+  --color-accent-600: #2563eb;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+/* Dark palette */
+.dark {
+  --color-surface-950: #0a0a0f;
+  --color-surface-900: #12121a;
+  --color-surface-800: #1e1e2a;
+  --color-surface-700: #2a2a3a;
+  --color-surface-600: #3a3a4d;
+  --color-surface-500: #5a5a72;
+  --color-surface-400: #8888a0;
+  --color-surface-300: #aaaabe;
+  --color-surface-200: #d0d0de;
+  --color-surface-100: #e8e8f0;
 }
