@@ -6,7 +6,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/login',
+      redirect: '/vault',
     },
     {
       path: '/login',
@@ -17,6 +17,11 @@ const router = createRouter({
       path: '/register',
       name: 'register',
       component: () => import('../views/RegisterView.vue'),
+    },
+    {
+      path: '/vault',
+      name: 'vault',
+      component: () => import('../views/VaultView.vue'),
     },
   ],
 })
